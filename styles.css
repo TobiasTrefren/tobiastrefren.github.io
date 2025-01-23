@@ -6,6 +6,7 @@ name{
 :root{
     --bg-color:#5386E4;
     --frame-color: #4C4B63;
+    --shader:#53526d;
     --text-color:#ABA8B2;
     --dash:#696887;
     --font:arial;
@@ -29,7 +30,8 @@ body{
 
 .mainheader{
     width:100%;
-    height:315px;
+    height:max-content;
+    padding-bottom:10px;
     border-bottom:1px dashed var(--dash);
     display:block;
 }
@@ -46,6 +48,7 @@ body{
     margin-bottom:15px;
 }
 
+
 .name{
     width:100%;
     height:40px;
@@ -55,6 +58,14 @@ body{
     text-align:center;
     font-weight:bold;
     border-bottom:1px dashed var(--dash)
+}
+
+.spacer{
+    width:100%;
+    height:30px;
+    align-items: center;
+    align-content: center;
+    margin-top:10px;
 }
 
 .school{
@@ -67,7 +78,6 @@ body{
     text-align:center;
     font-weight:bolder;
     padding-bottom:10px;
-    border-bottom:1px dashed var(--dash);
  
 }
 
@@ -121,4 +131,40 @@ label{
     margin-top:10px;
     padding-bottom:25px;
     border-bottom:1px dashed var(--dash)
+}
+
+.logos{
+    overflow:hidden;
+    padding: 10px 0;
+    width:80%;
+    margin-left:10%;
+    white-space: nowrap;
+    height:100px;
+    background-color:var(--shader);
+    
+}
+
+.logos:hover .logos-slide{
+    animation-play-state: paused;;
+}
+
+.logos-slide{
+    display:inline-block;
+    animation: 15s slide infinite linear;
+}
+
+.logos-slide img {
+    margin: 0 40px;
+    width:100px;
+    height:100px;
+    object-fit: contain;
+}
+
+@keyframes slide {
+    from{
+        transform:translateX(0%);
+    }
+    to{
+        transform:translateX(-100%);
+    }
 }

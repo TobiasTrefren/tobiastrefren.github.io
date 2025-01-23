@@ -3,7 +3,7 @@ const degree = document.getElementById('degree')
 
 school.addEventListener('mouseover', () =>{
     school.innerHTML = "Western Governors University";
-    school.style.fontSize = "18px";
+    school.style.fontSize = "20px";
 });
 
 school.addEventListener('mouseout', () =>{
@@ -13,7 +13,7 @@ school.addEventListener('mouseout', () =>{
 
 degree.addEventListener('mouseover', () =>{
     degree.innerHTML = "Bachelors in Computer Science";
-    degree.style.fontSize = "18px";
+    degree.style.fontSize = "20px";
 });
 
 degree.addEventListener('mouseout', () =>{
