@@ -7,7 +7,7 @@ name{
     --bg-color:#5386E4;
     --frame-color: #4C4B63;
     --shader:#53526d;
-    --text-color:#ABA8B2;
+    --text-color:white;
     --dash:#696887;
     --font:arial;
 }
@@ -20,7 +20,7 @@ body{
 
 .side{
     display:block;
-    width:350px;
+    width:325px;
     height:100%;
     background-color: var(--frame-color);
     position:fixed;
@@ -102,13 +102,30 @@ label{
 
 .card{
     width:auto;
-    height:100%;
+    height:fit-content;
+    min-height:200px;
     background-color: var(--frame-color);
     margin-left:350px;
     position:relative;
     border-radius:30px;
+    border:1px solid white;
+    margin-top:15px;
+    padding-bottom:30px;
+
 }
 
+.topbar{
+    width:102%;
+    height:50px;
+    background-color:var(--frame-color);
+    position:relative;
+    left:50%;
+    top:-1px;
+    transform:translate(-50%, 0);
+    border:1px solid white;
+    box-shadow: 0px 4px rgba(255, 255, 255, 0.18);
+   
+}
 .header{
     width:100%;
     height:auto;
@@ -117,6 +134,7 @@ label{
     font-size:32px;
     font-weight:bolder;
     text-align:center;
+    padding:5px;
 }
 .textblock{
     width:80%;
@@ -128,43 +146,8 @@ label{
     text-align:center;
     position:relative;
     margin-left:10%;
-    margin-top:10px;
+    margin-top:25px;
     padding-bottom:25px;
-    border-bottom:1px dashed var(--dash)
-}
-
-.logos{
-    overflow:hidden;
-    padding: 10px 0;
-    width:80%;
-    margin-left:10%;
-    white-space: nowrap;
-    height:100px;
-    background-color:var(--shader);
     
 }
 
-.logos:hover .logos-slide{
-    animation-play-state: paused;;
-}
-
-.logos-slide{
-    display:inline-block;
-    animation: 15s slide infinite linear;
-}
-
-.logos-slide img {
-    margin: 0 40px;
-    width:100px;
-    height:100px;
-    object-fit: contain;
-}
-
-@keyframes slide {
-    from{
-        transform:translateX(0%);
-    }
-    to{
-        transform:translateX(-100%);
-    }
-}
